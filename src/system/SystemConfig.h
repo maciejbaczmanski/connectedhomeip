@@ -672,25 +672,6 @@ struct LwIPEvent;
 #endif // CHIP_SYSTEM_CONFIG_USE_POSIX_PIPE
 
 /**
- *  @def CHIP_SYSTEM_CONFIG_USE_ZEPHYR_SOCKET_EXTENSIONS
- *
- *  @brief
- *      Include missing functions for Zephyr sockets
- *
- *  Zephyr socket API lacks some of the functions required by CHIP.
- *  If this value is set CHIP will provide the missing functions.
- *
- *  Defaults to enabled on Zephyr platforms using sockets
- */
-#ifndef CHIP_SYSTEM_CONFIG_USE_ZEPHYR_SOCKET_EXTENSIONS
-#if CHIP_SYSTEM_CONFIG_USE_SOCKETS && defined(__ZEPHYR__)
-#define CHIP_SYSTEM_CONFIG_USE_ZEPHYR_SOCKET_EXTENSIONS 1
-#else
-#define CHIP_SYSTEM_CONFIG_USE_ZEPHYR_SOCKET_EXTENSIONS 0
-#endif
-#endif // CHIP_SYSTEM_CONFIG_USE_ZEPHYR_SOCKET_EXTENSIONS
-
-/**
  *  @def CHIP_SYSTEM_CONFIG_USE_PLATFORM_MULTICAST_API
  *
  *  @brief
