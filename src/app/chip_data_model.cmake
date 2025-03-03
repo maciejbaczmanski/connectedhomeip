@@ -73,7 +73,7 @@ endfunction()
 #
 function(chip_configure_data_model APP_TARGET)
     set(SCOPE PRIVATE)
-    cmake_parse_arguments(ARG "" "SCOPE;ZAP_FILE;IDL" ${ARGN})
+    cmake_parse_arguments(ARG "" "SCOPE;ZAP_FILE;IDL" "" ${ARGN})
 
     if(ARG_SCOPE)
         set(SCOPE ${ARG_SCOPE})

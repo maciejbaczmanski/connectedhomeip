@@ -18,6 +18,7 @@ on:
     push:
         branches:
             - master
+            - matter_external_clusters_bck
             - 'v*-branch'
     pull_request:
     merge_group:
